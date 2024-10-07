@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room: Robo Cibernético</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script src="lógica.js"></script>
+    <h1>Escape Room: Robo Cibernético</h1>
+    <p>Estás intentando hackear un sistema de alta seguridad. Necesitas descifrar los 5 dígitos para completar el hackeo.</p>
+
+    <div class="puzzle" id="pista1">
+        <h2>Pista 1: Desencripta el código binario</h2>
+        <p>Un archivo ha sido interceptado. El contenido está en binario: <strong>011010</strong>. ¿Qué número decimal representa?</p>
+        <input type="text" id="respuesta1" placeholder="Ingresa un número">
+        <button onclick="comprobarRespuesta1()">Comprobar</button>
+        <p id="resultado1"></p>
+    </div>
+
+    <div class="puzzle" id="pista2" style="display: none;">
+        <h2>Pista 2: Contraseña oculta</h2>
+        <p>Accede a la base de datos. La contraseña está en un comentario del código fuente.</p>
+        <!-- La pista está aquí en un comentario -->
+        <!-- Contraseña: 7 -->
+        <input type="text" id="respuesta2" placeholder="Ingresa la contraseña">
+        <button onclick="comprobarRespuesta2()">Comprobar</button>
+        <p id="resultado2"></p>
+    </div>
+
+    <div class="puzzle" id="pista3" style="display: none;">
+        <h2>Pista 3: Mensaje cifrado</h2>
+        <p>El siguiente código está cifrado con el cifrado César (desplazamiento de 3 posiciones): <strong>JRG WR HQFRQWUDGRO</strong>.</p>
+        <input type="text" id="respuesta3" placeholder="Ingresa la respuesta descifrada">
+        <button onclick="comprobarRespuesta3()">Comprobar</button>
+        <p id="resultado3"></p>
+    </div>
+
+    <div class="clave-final" id="claveFinal" style="display: none;">
+        <h2>¡Acceso concedido!</h2>
+        <p>Has descifrado todos los dígitos. La clave completa es: <span id="claveCompleta"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
